@@ -1,0 +1,20 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	{% load staticfiles %}
+      <!-- The line above tells Django to be ready to listen for static files -->
+	<link rel="stylesheet" href="{% static 'ourApp/css/main.css' %}"media="screen" title="no title"  charset="utf-8">
+	<title>Interests</title>
+</head>
+
+<body>
+<h1>{{user.name}}'s Interests</h1>
+
+	{% for interest in interests %}
+		<p>{{interest.interest}}</p>
+	{% endfor %}
+
+</body>
+</html>
